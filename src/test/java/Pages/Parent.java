@@ -33,6 +33,7 @@ public class Parent {
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()),"Not confirmed!");
         new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).perform();
     }
+
     public void scrollToElementFunction(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
@@ -45,4 +46,13 @@ public class Parent {
     public void waitUntilClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
+    public double stringToDoubleConverter(WebElement element){
+        waitUntilVisible(element);
+        double cardTotalSum = Double.parseDouble(element.getText().replaceAll("[^0-9.,]", ""));
+        //cardTotalSum = cardTotalSum % (int) Math.pow(10, (int) Math.log10(cardTotalSum));
+        return cardTotalSum;
+    }
+
+
 }

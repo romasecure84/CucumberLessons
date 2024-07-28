@@ -22,4 +22,7 @@ public class DialogContent {
 
     @FindBy(css = "div#content > h2:nth-of-type(1)")
     public WebElement myAccount;
+
+    @FindBy(xpath = "(//span[text()='Add to Cart'])[4]")
+    public WebElement ipod4AddToCartButton;
 }
