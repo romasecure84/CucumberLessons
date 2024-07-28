@@ -20,6 +20,6 @@ public class DialogContent {
     @FindBy(css = "[action] .btn-primary")
     public WebElement loginButton;
 
-    @FindBy(xpath = "//h2[contains(text(),'My Account')]")
+    @FindBy(css = "div#content > h2:nth-of-type(1)")
     public WebElement myAccount;
 }
