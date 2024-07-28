@@ -27,8 +27,8 @@ public class _01_LoginSteps {
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() throws InterruptedException {
+
         Thread.sleep(2000);
         Assert.assertTrue(dialogContent.myAccount.isDisplayed());
-        BaseDriver.quitDriver();
     }
 }
