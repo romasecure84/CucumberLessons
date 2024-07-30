@@ -25,4 +25,13 @@ public class DialogContent {
 
     @FindBy(xpath = "(//span[text()='Add to Cart'])[4]")
     public WebElement ipod4AddToCartButton;
+
+    @FindBy(xpath = "(//a[text()='Address Book'])[1]")
+    public WebElement addressBookLink;
+
+    @FindBy(linkText = "New Address")
+    public WebElement newAddressButton;
+
+    @FindBy(css = ".alert-dismissible")
+    public WebElement successMessage;
 }

@@ -31,7 +31,7 @@ public class FormContent {
     @FindBy(id = "input-country")
     public WebElement selectCountry;
 
-    @FindBy(id = "input-zone")
+    @FindBy(css = "select#input-zone")
     public WebElement selectState;
 
     @FindBy(css = "input[value='Continue']")
