@@ -34,4 +34,7 @@ public class DialogContent {
 
     @FindBy(css = ".alert-dismissible")
     public WebElement successMessage;
+
+    @FindBy(css = "button[onclick*='cart.add']")
+    public WebElement addToCartButton;
 }
