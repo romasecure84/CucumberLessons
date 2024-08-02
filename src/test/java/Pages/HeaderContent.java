@@ -18,4 +18,21 @@ public class HeaderContent {
 
     @FindBy(css = "span#cart-total")
     public WebElement shoppingCart;
+
+    @FindBy(xpath = "(//a[contains(@href, 'checkout/cart')])[2]")
+    public WebElement viewCart;
+
+    @FindBy(xpath = "(//span[text()='Add to Cart'])[4]")
+    public WebElement ipod4;
+
+    public WebElement getWebElement(String element){
+        switch (element){
+            case "searchBox": return this.searchBox;
+            case "searchButton" : return this.searchButton;
+            case "shoppingCart" : return this.shoppingCart;
+            case "viewCart" : return this.viewCart;
+            case "ipod4" : return this.ipod4;
+        }
+        return null;
+    }
 }
