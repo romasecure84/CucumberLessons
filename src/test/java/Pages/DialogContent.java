@@ -37,4 +37,19 @@ public class DialogContent {
 
     @FindBy(css = "button[onclick*='cart.add']")
     public WebElement addToCartButton;
+
+    public WebElement getWebElement(String element){
+        switch (element){
+            case "email": return this.email;
+            case "password" : return this.password;
+            case "loginButton" : return this.loginButton;
+            case "myAccount" : return this.myAccount;
+            case "ipod4AddToCartButton" : return this.ipod4AddToCartButton;
+            case "addressBookLink": return this.addressBookLink;
+            case "newAddressButton" : return this.newAddressButton;
+            case "successMessage" : return this.successMessage;
+            case "addToCartButton" : return this.addToCartButton;
+        }
+        return null;
+    }
 }
