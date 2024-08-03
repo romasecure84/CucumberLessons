@@ -1,11 +1,14 @@
 package Pages;
 
 import Utilities.BaseDriver;
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HeaderContent {
+import java.util.List;
+
+public class HeaderContent extends Parent{
     public HeaderContent(){
         PageFactory.initElements(BaseDriver.getDriver(), this);
     }
