@@ -38,27 +38,18 @@ public class FormContent {
     public WebElement continueButton;
 
     public WebElement getWebElement(String element) {
-        switch (element) {
-            case "firstNameShield":
-                return this.firstNameShield;
-            case "lastNameShield":
-                return this.lastNameShield;
-            case "companyNameShield":
-                return this.companyNameShield;
-            case "addressShield":
-                return this.addressShield;
-            case "cityShield":
-                return this.cityShield;
-            case "postCodeShield":
-                return this.postCodeShield;
-            case "selectCountry":
-                return this.selectCountry;
-            case "selectState":
-                return this.selectState;
-            case "continueButton":
-                return this.continueButton;
-        }
-        return null;
+        return switch (element) {
+            case "firstNameShield" -> this.firstNameShield;
+            case "lastNameShield" -> this.lastNameShield;
+            case "companyNameShield" -> this.companyNameShield;
+            case "addressShield" -> this.addressShield;
+            case "cityShield" -> this.cityShield;
+            case "postCodeShield" -> this.postCodeShield;
+            case "selectCountry" -> this.selectCountry;
+            case "selectState" -> this.selectState;
+            case "continueButton" -> this.continueButton;
+            default -> null;
+        };
     }
 
 }

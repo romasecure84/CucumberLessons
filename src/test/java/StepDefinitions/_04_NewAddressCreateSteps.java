@@ -9,9 +9,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
-public class _04_AddNewItemParametersSteps extends Parent {
+public class _04_NewAddressCreateSteps extends Parent {
     DialogContent dc = new DialogContent();
     FormContent fc = new FormContent();
     HeaderContent hc = new HeaderContent();
